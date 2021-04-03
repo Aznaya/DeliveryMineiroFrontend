@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/jnsAntunes/DeliveryMineiroFrontend.svg?branch=main)](https://www.travis-ci.com/jnsAntunes/DeliveryMineiroFrontend)
+
 # DeliveryMineiroFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
