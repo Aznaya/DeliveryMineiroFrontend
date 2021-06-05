@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,13 +19,14 @@ import { Error404PageComponent } from './pages/error404-page/error404-page.compo
     HomePageComponent,
     InitialPageComponent,
     HeaderComponent,
-    Error404PageComponent
+    Error404PageComponent,
   ],
   imports: [
     BrowserModule,
     RoutingModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TooltipModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
