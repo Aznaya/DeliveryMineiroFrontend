@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { NgxMaskModule } from 'ngx-mask';
+import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,14 +21,16 @@ import { Error404PageComponent } from './pages/error404-page/error404-page.compo
     HomePageComponent,
     InitialPageComponent,
     HeaderComponent,
-    Error404PageComponent,
+    Error404PageComponent
   ],
   imports: [
     BrowserModule,
     RoutingModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

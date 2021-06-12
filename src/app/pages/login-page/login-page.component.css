@@ -1,0 +1,30 @@
+h1 {
+  font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  color: darkgray;
+}
+
+input:hover {
+  border-color: #F77F00;
+}
+input:focus {
+  border-color: #F77F00;
+}
+
+.cor-fundo {
+  background-image: linear-gradient(#F77F00, #e48622, #c58a4b, rgb(221, 159, 109));
+}
+
+.borda {
+  border-radius: 25px;
+}
+
