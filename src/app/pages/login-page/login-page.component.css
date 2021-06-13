@@ -1,5 +1,5 @@
 h1 {
-  font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+  font-family: "Satisfy", "Brush Script MT", "Lucida Handwriting", cursive;
   font-size: 50px;
   font-weight: bold;
   display: flex;
@@ -28,3 +28,11 @@ input:focus {
   border-radius: 25px;
 }
 
+.img {
+  display: flex;
+  justify-content: center;
+}
+
+.img img {
+  width: 10rem;
+}
