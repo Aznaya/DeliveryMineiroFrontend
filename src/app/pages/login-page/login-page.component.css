@@ -20,10 +20,6 @@ input:focus {
   border-color: #F77F00;
 }
 
-.cor-fundo {
-  background-image: linear-gradient(#F77F00, #e48622, #c58a4b, rgb(221, 159, 109));
-}
-
 .borda {
   border-radius: 25px;
 }
