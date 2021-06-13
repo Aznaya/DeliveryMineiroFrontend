@@ -11,13 +11,15 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { RoutingModule } from './app.router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Error404PageComponent } from './pages/error404-page/error404-page.component';
+import { RegistroPageComponent } from './pages/registro-page/registro-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     HomePageComponent,
-    Error404PageComponent
+    Error404PageComponent,
+    RegistroPageComponent
   ],
   imports: [
     BrowserModule,

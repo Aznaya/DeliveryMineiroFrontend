@@ -1,0 +1,43 @@
+h1 {
+	font-family: "Satisfy", "Brush Script MT", "Lucida Handwriting", cursive;
+	font-size: 50px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 10px;
+}
+
+h3 {
+	display: flex;
+	justify-content: center;
+	color: darkgray;
+}
+
+input:hover {
+	border-color: #F77F00;
+}
+
+input:focus {
+	border-color: #F77F00;
+}
+
+.form {
+	border-radius: 25px;
+	height: 75%;
+}
+
+.img {
+	display: flex;
+	justify-content: center;
+}
+
+.img img {
+	height: 75%;
+}
+
+.componente {
+	max-height: 35rem;
+	margin-top: 5rem;
+	display: inline-flex;
+	justify-content: center;
+}
