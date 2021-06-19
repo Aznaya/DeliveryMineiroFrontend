@@ -11,7 +11,7 @@ import { ListaPedidosPageComponent } from './pages/lista-pedidos-page/lista-pedi
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'entrar',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -27,11 +27,11 @@ const routes: Routes = [
     component: HomePageComponent
   },
   {
-    path: 'editar-informacoes',
+    path: 'perfil',
     component: EditarInformacaoPageComponent
   },
   {
-    path: 'login',
+    path: 'homega',
     component: LoginPageComponent
   },
   {

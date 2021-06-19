@@ -16,6 +16,7 @@ import { PedidoPageComponent } from './pages/pedido-page/pedido-page.component';
 import { HistoricoPageComponent } from './pages/historico-page/historico-page.component';
 import { EditarInformacaoPageComponent } from './pages/editar-informacao-page/editar-informacao-page.component';
 import { ListaPedidosPageComponent } from './pages/lista-pedidos-page/lista-pedidos-page.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ListaPedidosPageComponent } from './pages/lista-pedidos-page/lista-pedi
     PedidoPageComponent,
     HistoricoPageComponent,
     EditarInformacaoPageComponent,
-    ListaPedidosPageComponent
+    ListaPedidosPageComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+.img {
+  max-width: 5rem;
+  height: auto;
+}
+
+li {
+  margin-left: 2rem;
+  font-size: x-large;
+}
+
+img {
+  max-width: 100%;
+}
