@@ -1,6 +1,12 @@
 .img {
   max-width: 5rem;
   height: auto;
+
+}
+
+nav {
+  color: black;
+  border: 3px solid;
 }
 
 li {

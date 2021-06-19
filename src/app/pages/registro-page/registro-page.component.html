@@ -16,7 +16,7 @@
           <input type="password" class="form-control m-2" [(ngModel)]="senha" placeholder="Sua senha">
           <input type="password" class="form-control m-2" [(ngModel)]="confirmar_senha" placeholder="Confirmar senha">
 					<input type="text" class="form-control m-2" [(ngModel)]="endereco" placeholder="Endereço">
-					<input *ngIf="campo_pagamento" type="date" class="form-control m-2" [(ngModel)]="data_pagamento" placeholder="Data de pagamento">
+					<input *ngIf="campo_pagamento" type="date" class="form-control m-2" [(ngModel)]="data_pagamento" title="Data de pagamento">
         </div>
         <div class="d-flex justify-content-center p-2">
           <button type="button" class="btn btn-warning w-50" (click)="realizaLogin()">Cadastrar</button>
