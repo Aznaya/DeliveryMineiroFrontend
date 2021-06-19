@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { NgxMaskModule } from 'ngx-mask';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,10 @@ import { RoutingModule } from './app.router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Error404PageComponent } from './pages/error404-page/error404-page.component';
 import { RegistroPageComponent } from './pages/registro-page/registro-page.component';
+import { PedidoPageComponent } from './pages/pedido-page/pedido-page.component';
+import { HistoricoPageComponent } from './pages/historico-page/historico-page.component';
+import { EditarInformacaoPageComponent } from './pages/editar-informacao-page/editar-informacao-page.component';
+import { ListaPedidosPageComponent } from './pages/lista-pedidos-page/lista-pedidos-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { RegistroPageComponent } from './pages/registro-page/registro-page.compo
     LoginPageComponent,
     HomePageComponent,
     Error404PageComponent,
-    RegistroPageComponent
+    RegistroPageComponent,
+    PedidoPageComponent,
+    HistoricoPageComponent,
+    EditarInformacaoPageComponent,
+    ListaPedidosPageComponent
   ],
   imports: [
     BrowserModule,

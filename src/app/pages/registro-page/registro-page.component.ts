@@ -11,6 +11,8 @@ export class RegistroPageComponent implements OnInit {
   public senha: String = '';
   public confirmar_senha: String = '';
   public endereco: String = '';
+  public data_pagamento: String = '';
+  public campo_pagamento: boolean = false;
 
   constructor() { }
 
@@ -18,27 +20,29 @@ export class RegistroPageComponent implements OnInit {
   }
 
   vallidaCpfCnpj(): void {
-    if (this.cpf_cnpj.length >= 1 && this.cpf_cnpj.length <= 11) {
+    if (this.cpf_cnpj.length >= 0 && this.cpf_cnpj.length <= 11) {
       console.log('CPF:', this.cpf_cnpj)
+      this.campo_pagamento = false;
     } else if (this.cpf_cnpj.length <= 14) {
-      console.log('CNPJ:', this.cpf_cnpj)
+      console.log('CNPJ:', this.cpf_cnpj);
+      this.campo_pagamento = true;
     }
   }
 
   realizaLogin(): void {
-    console.log('BOTÃO PRESSIONADO')
+    console.log('BOTÃO PRESSIONADO');
     if (this.cpf_cnpj.length <= 11) {
-      console.log('Usuário Cadastrado:')
-      console.log('Nomes:', this.nome)
-      console.log('CPF:', this.cpf_cnpj)
-      console.log('Senha:', this.senha)
-      console.log('Senha Confirmada:', this.confirmar_senha)
+      console.log('Usuário Cadastrado:');
+      console.log('Nomes:', this.nome);
+      console.log('CPF:', this.cpf_cnpj);
+      console.log('Senha:', this.senha);
+      console.log('Senha Confirmada:', this.confirmar_senha);
     } else {
-      console.log('Empresa Cadastrada:')
-      console.log('Nomes:', this.nome)
-      console.log('CNPJ:', this.cpf_cnpj)
-      console.log('Senha:', this.senha)
-      console.log('Senha Confirmada:', this.confirmar_senha)
+      console.log('Empresa Cadastrada:');
+      console.log('Nomes:', this.nome);
+      console.log('CNPJ:', this.cpf_cnpj);
+      console.log('Senha:', this.senha);
+      console.log('Senha Confirmada:', this.confirmar_senha);
     }
   }
 

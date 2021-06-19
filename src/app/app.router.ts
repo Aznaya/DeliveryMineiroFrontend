@@ -3,24 +3,48 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { Error404PageComponent } from './pages/error404-page/error404-page.component';
 import { RegistroPageComponent } from './pages/registro-page/registro-page.component';
+import { EditarInformacaoPageComponent } from './pages/editar-informacao-page/editar-informacao-page.component';
+import { PedidoPageComponent } from './pages/pedido-page/pedido-page.component';
+import { HistoricoPageComponent } from './pages/historico-page/historico-page.component';
+import { ListaPedidosPageComponent } from './pages/lista-pedidos-page/lista-pedidos-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'entrar',
     pathMatch: 'full'
+  },
+  {
+    path: 'entrar',
+    component: LoginPageComponent
+  },
+  {
+    path: 'registrar',
+    component: RegistroPageComponent
   },
   {
     path: 'home',
     component: HomePageComponent
   },
   {
+    path: 'editar-informacoes',
+    component: EditarInformacaoPageComponent
+  },
+  {
     path: 'login',
     component: LoginPageComponent
   },
   {
-    path: 'register',
-    component: RegistroPageComponent
+    path: 'pedido',
+    component: PedidoPageComponent
+  },
+  {
+    path: 'historico',
+    component: HistoricoPageComponent
+  },
+  {
+    path: 'lista-pedidos',
+    component: ListaPedidosPageComponent
   },
   {
     path: '**',
