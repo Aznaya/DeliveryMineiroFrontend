@@ -50,6 +50,6 @@ const routes: Routes = [
     path: '**',
     component: Error404PageComponent
   }
-]
+];
 
 export const RoutingModule = RouterModule.forRoot(routes);

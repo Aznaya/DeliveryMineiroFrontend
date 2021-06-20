@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
   public perfilAdministrador = false;
-  public perfil = 1;
+  public perfil = 2;
 
   constructor() { }
 
