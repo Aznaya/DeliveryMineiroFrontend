@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pedido-page.component.css']
 })
 export class PedidoPageComponent implements OnInit {
-  public dinheiro: boolean = false;
-  public cartao: boolean = false;
-  public troco: Number = 0;
-  public bandeira: String = '';
+  public dinheiro = false;
+  public cartao = false;
+  public troco = 0;
+  public bandeira = '';
   public bandeiras = [
     'Visa',
     'Mastercard',
@@ -19,7 +19,7 @@ export class PedidoPageComponent implements OnInit {
     'Dinners Club',
     'Sorocred'
   ];
-  public endereco: String = 'Anor Londor, 115, Atrás dos Gigantes, se chegar no salão principal passou';
+  public endereco = 'Anor Londor, 115, Atrás dos Gigantes, se chegar no salão principal passou';
 
   constructor() { }
 
@@ -40,11 +40,11 @@ export class PedidoPageComponent implements OnInit {
     console.log('Realizando Pedido');
     console.log('O pagamento será em ');
     if (this.dinheiro) {
-      console.log('Dinheiro com troco de ', this.troco)
+      console.log('Dinheiro com troco de ', this.troco);
     }
     if (this.cartao) {
-      console.log('Cartão com bandeira da ', this.bandeira)
+      console.log('Cartão com bandeira da ', this.bandeira);
     }
-    console.log('No endereço: ', this.endereco)
+    console.log('No endereço: ', this.endereco);
   }
 }

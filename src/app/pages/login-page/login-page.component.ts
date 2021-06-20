@@ -1,4 +1,5 @@
 import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -6,28 +7,33 @@ import { Component, OnInit, SimpleChanges } from '@angular/core';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
+  private CPFTESTE = '12345678910';
+  private SENHATESTE = 'Abobora';
 
-  public cpf_cnpj: String = '';
+  public cpfCnpj = '';
+  public senha = '';
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   vallidaCpfCnpj(): void {
-    if (this.cpf_cnpj.length >= 1 && this.cpf_cnpj.length <= 11) {
-      console.log('CPF:', this.cpf_cnpj)
-    } else if (this.cpf_cnpj.length <= 14) {
-      console.log('CNPJ:', this.cpf_cnpj)
+    if (this.cpfCnpj.length >= 1 && this.cpfCnpj.length <= 11) {
+      console.log('CPF:', this.cpfCnpj);
+    } else if (this.cpfCnpj.length <= 14) {
+      console.log('CNPJ:', this.cpfCnpj);
     }
   }
 
   realizaLogin(): void {
-    console.log('BOTÃO PRESSIONADO')
-    if (this.cpf_cnpj.length <= 11) {
-      console.log('CPF:', this.cpf_cnpj)
+    if ((this.cpfCnpj === this.CPFTESTE) && (this.senha === this.SENHATESTE)) {
+      // Realiza o login
+      this.router.navigate([`/home`]);
     } else {
-      console.log('CNPJ:', this.cpf_cnpj)
+      // Mensagem de erro
+      window.alert('Usuário não encontrado, por favor, realize o cadastro');
+      this.router.navigate([`/registrar`]);
     }
   }
 

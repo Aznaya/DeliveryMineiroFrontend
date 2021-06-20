@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registro-page.component.css']
 })
 export class RegistroPageComponent implements OnInit {
-  public nome: String = '';
-  public cpf_cnpj: String = '';
-  public senha: String = '';
-  public confirmar_senha: String = '';
-  public endereco: String = '';
-  public data_pagamento: String = '';
-  public campo_pagamento: boolean = false;
+  public nome = '';
+  public cpfCnpj = '';
+  public senha = '';
+  public confirmarSenha = '';
+  public endereco = '';
+  public dataPagamento = '';
+  public campoPagamento = false;
 
   constructor() { }
 
@@ -20,29 +20,29 @@ export class RegistroPageComponent implements OnInit {
   }
 
   vallidaCpfCnpj(): void {
-    if (this.cpf_cnpj.length >= 0 && this.cpf_cnpj.length <= 11) {
-      console.log('CPF:', this.cpf_cnpj)
-      this.campo_pagamento = false;
-    } else if (this.cpf_cnpj.length <= 14) {
-      console.log('CNPJ:', this.cpf_cnpj);
-      this.campo_pagamento = true;
+    if (this.cpfCnpj.length >= 0 && this.cpfCnpj.length <= 11) {
+      console.log('CPF:', this.cpfCnpj);
+      this.campoPagamento = false;
+    } else if (this.cpfCnpj.length <= 14) {
+      console.log('CNPJ:', this.cpfCnpj);
+      this.campoPagamento = true;
     }
   }
 
   realizaLogin(): void {
     console.log('BOTÃO PRESSIONADO');
-    if (this.cpf_cnpj.length <= 11) {
+    if (this.cpfCnpj.length <= 11) {
       console.log('Usuário Cadastrado:');
       console.log('Nomes:', this.nome);
-      console.log('CPF:', this.cpf_cnpj);
+      console.log('CPF:', this.cpfCnpj);
       console.log('Senha:', this.senha);
-      console.log('Senha Confirmada:', this.confirmar_senha);
+      console.log('Senha Confirmada:', this.confirmarSenha);
     } else {
       console.log('Empresa Cadastrada:');
       console.log('Nomes:', this.nome);
-      console.log('CNPJ:', this.cpf_cnpj);
+      console.log('CNPJ:', this.cpfCnpj);
       console.log('Senha:', this.senha);
-      console.log('Senha Confirmada:', this.confirmar_senha);
+      console.log('Senha Confirmada:', this.confirmarSenha);
     }
   }
 

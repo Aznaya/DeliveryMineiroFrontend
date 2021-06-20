@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  public perfil_administrador: boolean = false;
-  public perfil: Number = 1;
+  public perfilAdministrador = false;
+  public perfil = 1;
 
   constructor() { }
 
@@ -15,11 +15,11 @@ export class HomePageComponent implements OnInit {
     this.verificaPerfil(this.perfil);
   }
 
-  verificaPerfil(perfil:Number): void {
+  verificaPerfil(perfil: number): void {
     if (perfil === 1) {
-      this.perfil_administrador = true;
+      this.perfilAdministrador = true;
     } else {
-      this.perfil_administrador = false;
+      this.perfilAdministrador = false;
     }
   }
 
