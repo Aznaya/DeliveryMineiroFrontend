@@ -1,2 +1,47 @@
 <app-nav-bar></app-nav-bar>
-<p>pedido-page works!</p>
+
+<div class="body d-flex justify-content-around p-3">
+  <div class="carrinho bg-white">
+    <h1>Carrinho:</h1>
+  </div>
+  <div class="componente">
+    <div class="pagamento d-flex justify-content-center bg-white w-100">
+      <div class="w-100 h-100 p-3">
+        <h1 class="d-flex justify-content-center">Pagamento em:</h1>
+        <div class="d-flex justify-content-around w-100 p-3">
+          <div class="d-flex justify-content-center">
+            <button type="button" class="botao btn btn-warning w-100 px-5" (click)="tipoPagamento(true)">Dinheiro</button>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="button" class="botao btn btn-warning w-100 px-5" (click)="tipoPagamento(false)">Cartão</button>
+          </div>
+        </div>
+        <div class="p-2 w-100 h-100 d-flex justify-content-center">
+          <div *ngIf="dinheiro">
+            <div>
+              <h2 class="d-flex justify-content-center p-2">Troco:</h2>
+              <input type="number" class="form-control" [(ngModel)]="troco" placeholder="Troco">
+            </div>
+          </div>
+          <div *ngIf="cartao">
+            <div>
+              <h2 class="d-flex justify-content-center p-2">Selecione a Bandeira:</h2>
+              <select [(ngModel)]="bandeira" class="form-control" placeholder="Selecione a bandeira">
+                <option *ngFor="let item of bandeiras" [value]="item">{{item}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="endereco d-flex justify-content-center bg-white w-100 p-3">
+      <div class="w-100">
+        <h1 class="d-flex justify-content-center p-2">Endereço:</h1>
+        <input type="text" class="form-control w-100" [(ngModel)]="endereco" placeholder="Endereço">
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button type="button" class="botao btn btn-warning w-50" (click)="realizarPedido()">Confirmar Pedido</button>
+    </div>
+  </div>
+</div>

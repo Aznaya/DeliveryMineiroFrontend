@@ -1,0 +1,52 @@
+h1 {
+	font-family: "Satisfy", "Brush Script MT", "Lucida Handwriting", cursive;
+	font-size: 35px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 10px;
+}
+
+h2 {
+  font-family: "Satisfy", "Brush Script MT", "Lucida Handwriting", cursive;
+  font-size: 30px;
+}
+
+.body {
+  height: 80%;
+}
+
+.componente {
+  width: 50%;
+  height: 100%;
+  color: black;
+  border: 3px solid;
+}
+
+.carrinho {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+  padding: 1rem;
+  color: black;
+  border: 3px solid;
+}
+
+.pagamento {
+  height: 60%;
+  padding: 1px;
+  color: black;
+  border-style: solid;
+  border-width: 0px 0px 3px 0px;
+}
+
+.endereco {
+  height: 40%;
+  padding: 1px;
+}
+
+.botao {
+  color: black;
+  border: 3px solid;
+}
