@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
-import { HistoricoUsuario } from '../../modal/historico-usuario/historico-usuario';
+import { Opcao } from '../../modal/opcao/opcao';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HistoricoUsuarioService {
+export class OpcaoService {
 
-  url = 'http://localhost:3000/historico/usuario';
+  url = 'http://localhost:3000/opcao';
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -19,16 +19,25 @@ export class HistoricoUsuarioService {
     })
   };
 
-  getHistoricoUsuario(): Observable<HistoricoUsuario[]> {
-    return this.httpClient.get<HistoricoUsuario[]>(this.url)
+  getOpcao(): Observable<Opcao[]> {
+    return this.httpClient.get<Opcao[]>(this.url)
       .pipe(
         retry(2),
         catchError(this.handleError)
       );
   }
 
-  saveHistoricoUsuario(historicoUsuario: HistoricoUsuario): Observable<HistoricoUsuario> {
-    return this.httpClient.post<HistoricoUsuario>(this.url, JSON.stringify(historicoUsuario), this.httpOptions)
+  saveOpcao(opcao: Opcao): Observable<Opcao> {
+    return this.httpClient.post<Opcao>(this.url, JSON.stringify(opcao), this.httpOptions)
+      .pipe(
+        retry(1),
+        catchError(this.handleError)
+      );
+  }
+
+  // tslint:disable-next-line: typedef
+  deleteOpcao(idOpcao: number) {
+    return this.httpClient.delete<Opcao>(this.url + '/' + idOpcao, this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.handleError)
