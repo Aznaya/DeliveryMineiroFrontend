@@ -11,7 +11,7 @@ import { ListaPedidosPageComponent } from './pages/lista-pedidos-page/lista-pedi
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'entrar',
     pathMatch: 'full'
   },
   {

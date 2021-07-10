@@ -16,10 +16,11 @@
           <input type="password" class="form-control m-2" [(ngModel)]="senha" placeholder="Sua senha">
           <input type="password" class="form-control m-2" [(ngModel)]="confirmarSenha" placeholder="Confirmar senha">
 					<input type="text" class="form-control m-2" [(ngModel)]="endereco" placeholder="Endereço">
-					<input *ngIf="campoPagamento" type="date" class="form-control m-2" [(ngModel)]="dataPagamento" title="Data de pagamento">
+					<input *ngIf="campoPagamento" type="number" class="form-control m-2" [(ngModel)]="dataPagamento"
+            placeholder="Data de pagamento" title="Entre os dias 1 e 30">
         </div>
         <div class="d-flex justify-content-center p-2">
-          <button type="button" class="btn btn-warning w-50" (click)="realizaLogin()">Cadastrar</button>
+          <button type="button" class="btn btn-warning w-50" (click)="realizaRegistro()">Cadastrar</button>
         </div>
         <div class="d-flex justify-content-center p-2">
           <button type="button" class="btn mce-btn-small w-50" [routerLink]="[ '/entrar' ]">Voltar</button>

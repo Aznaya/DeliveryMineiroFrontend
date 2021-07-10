@@ -19,8 +19,8 @@ export class EmpresaService {
     })
   };
 
-  getEmpresaById(idEmpresa: number): Observable<Empresa> {
-    return this.httpClient.get<Empresa>(this.url + `/${idEmpresa}`)
+  getEmpresaByCnpj(cnpj: string): Observable<Empresa> {
+    return this.httpClient.get<Empresa>(this.url + `/${cnpj}`)
       .pipe(
         retry(2),
         catchError(this.handleError)

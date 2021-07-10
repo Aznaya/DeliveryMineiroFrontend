@@ -17,6 +17,7 @@ import { HistoricoPageComponent } from './pages/historico-page/historico-page.co
 import { EditarInformacaoPageComponent } from './pages/editar-informacao-page/editar-informacao-page.component';
 import { ListaPedidosPageComponent } from './pages/lista-pedidos-page/lista-pedidos-page.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     RoutingModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     TooltipModule.forRoot(),
     NgxMaskModule.forRoot()

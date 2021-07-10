@@ -1,6 +1,6 @@
 export interface HistoricoUsuario {
   id_historico: number;
-  data: Date;
+  data: string;
   valor: number;
   id_usuario: number;
 }

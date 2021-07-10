@@ -6,4 +6,5 @@ export interface Empresa {
   id_tipo_conta: number;
   cnpj: string;
   endereco: string;
+  data: string;
 }

@@ -18,8 +18,8 @@ export class UsuarioService {
     })
   };
 
-  getUsuarioById(idUsuario: number): Observable<Usuario> {
-    return this.httpClient.get<Usuario>(this.url + `/${idUsuario}`)
+  getUsuarioByCpf(cpf: string): Observable<Usuario> {
+    return this.httpClient.get<Usuario>(this.url + `/${cpf}`)
       .pipe(
         retry(2),
         catchError(this.handleError)
